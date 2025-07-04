@@ -43,9 +43,8 @@ To build a complete data science pipeline that:
 ---
 
 ## 📊 Dashboard Preview
-
-> Coming soon: Screenshot here  
-> (You can add a screenshot as `dashboard/assets/dashboard_preview.png` and reference it with `![preview](assets/dashboard_preview.png)`)
+ 
+> `dashboard/assets/dashboard_preview.png` and reference it with `![preview](assets/dashboard_preview.png)`)
 
 ---
 
