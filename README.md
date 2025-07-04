@@ -119,31 +119,19 @@ To build a complete data science pipeline that:
 
 ---
 
-## 📁 How to Run
-
-1. Clone the repo  
-2. Install requirements
-
-pip install -r requirements.txt
-
-3. Fetch data from Binance:
-   
-python main.py
-
-4. Launch the dashboard:
-streamlit run dashboard/app.py
 
 
 ## 📁 How to Run
 
 1. Clone the repository:
 
+```bash
 git clone https://github.com/berkaykorcum/algorithmic-trade-insights.git
 cd algorithmic-trade-insights
 
 
 2. Install the dependencies:
-
+```bash
 pip install -r requirements.txt
 
 
