@@ -44,7 +44,7 @@ To build a complete data science pipeline that:
 
 ## 📊 Dashboard Preview
  
-![Dashboard Preview](dashboard/assets/BTC Price Over Time.png)
+![Dashboard Preview](dashboard/assets/BTC_Price_Over_Time.png)
 
 
 ---
