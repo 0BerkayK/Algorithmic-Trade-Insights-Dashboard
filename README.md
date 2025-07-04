@@ -45,7 +45,16 @@ To build a complete data science pipeline that:
 ## 📊 Dashboard Preview
  
 ![Dashboard Preview](dashboard/assets/BTC_Price_Over_Time.png)
+
 ![Dashboard Preview](dashboard/assets/BTC_Price_Moving_Average.png)
+
+![Dashboard Preview](dashboard/assets/Price_Volatility.png)
+
+![Dashboard Preview](dashboard/assets/Price_Anomalies.png)
+
+![Dashboard Preview](dashboard/assets/Buy&Sell_Signals.png)
+
+![Dashboard Preview](dashboard/assets/Last_10_Buy&Sell_Signals.png)
 
 
 
