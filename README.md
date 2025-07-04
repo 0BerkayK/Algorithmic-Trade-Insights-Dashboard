@@ -44,7 +44,7 @@ To build a complete data science pipeline that:
 
 ## 📊 Dashboard Preview
  
-> `dashboard/assets/BTC Price Over Time.png` and reference it with `![preview](assets/dashboard_preview.png)`)
+> `dashboard/assets/BTC Price Over Time.png` and reference it with `![preview](assets/BTC Price Over Time.png)`)
 
 ---
 
