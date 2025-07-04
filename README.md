@@ -124,7 +124,10 @@ To build a complete data science pipeline that:
 1. Clone the repo  
 2. Install requirements  
 ```bash
-pip install -r requirements.txt
+pip install -r requirements.txt 
+
+
+
 
 ---
 
