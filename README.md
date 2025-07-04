@@ -126,4 +126,73 @@ To build a complete data science pipeline that:
 ```bash
 pip install -r requirements.txt
 
+---
+
+## 📐 Technical & Statistical Concepts
+
+This section documents the formulas and concepts used in this project.
+
+---
+
+### 📊 Simple Moving Average (SMA)
+
+SMA is used to smooth out price data by averaging a number of past prices.
+
+**Formula:**
+
+\[
+SMA_t = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
+\]
+
+- \( P_t \): Price at time \( t \)
+- \( n \): Number of periods (e.g., 30 minutes)
+
+In this project, we used **30-period SMA** to track short-term price trends.
+
+---
+
+### 📈 Rolling Volatility (Standard Deviation)
+
+Volatility measures the amount of variation or dispersion of a set of price values.
+
+**Formula:**
+
+\[
+\sigma_t = \sqrt{ \frac{1}{n} \sum_{i=0}^{n-1} (P_{t-i} - \mu)^2 }
+\]
+
+- \( \mu \): Mean price over the period
+- \( \sigma_t \): Rolling standard deviation at time \( t \)
+
+This helps us understand how "noisy" or stable the market is at a given time.
+
+---
+
+### 🚨 Z-Score Based Anomaly Detection
+
+Z-score tells us how far a price is from the mean in terms of standard deviations.
+
+**Formula:**
+
+\[
+z_t = \frac{P_t - \mu}{\sigma}
+\]
+
+- If \( |z| > 2.5 \), the price is considered an **anomaly**.
+
+In our dashboard, anomalies are visualized as red "X" markers on the price chart.
+
+---
+
+### 📉 SMA Crossover Trading Strategy
+
+A basic buy/sell logic using price and moving average:
+
+- If \( P_t < SMA_t \): **BUY signal**
+- If \( P_t > SMA_t \): **SELL signal**
+
+This is a simple but effective strategy to follow momentum reversals.
+
+---
+
 
