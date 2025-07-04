@@ -122,18 +122,44 @@ To build a complete data science pipeline that:
 ## 📁 How to Run
 
 1. Clone the repo  
-2. Install requirements  
-```bash
-pip install -r requirements.txt 
+2. Install requirements
+
+pip install -r requirements.txt
+
+3. Fetch data from Binance:
+   
+python main.py
+
+4. Launch the dashboard:
+streamlit run dashboard/app.py
+
+
+## 📁 How to Run
+
+1. Clone the repository:
+
+git clone https://github.com/berkaykorcum/algorithmic-trade-insights.git
+cd algorithmic-trade-insights
+
+
+2. Install the dependencies:
+
+pip install -r requirements.txt
+
+
+3. Fetch fresh BTC price data:
+
+python main.py
 
 
 
+4. Launch the dashboard in your browser:
 
----
+streamlit run dashboard/app.py
+
+
 
 ## 📐 Technical & Statistical Concepts
-
-This section documents the formulas and concepts used in this project.
 
 ---
 
@@ -141,61 +167,44 @@ This section documents the formulas and concepts used in this project.
 
 SMA is used to smooth out price data by averaging a number of past prices.
 
-**Formula:**
-
-\[
-SMA_t = \frac{1}{n} \sum_{i=0}^{n-1} P_{t-i}
-\]
-
-- \( P_t \): Price at time \( t \)
-- \( n \): Number of periods (e.g., 30 minutes)
-
-In this project, we used **30-period SMA** to track short-term price trends.
+**Formula:**  
+SMA_t = (P_t + P_{t-1} + ... + P_{t-n+1}) / n  
+Where:  
+- P_t: Price at time t  
+- n: Number of periods (e.g., 30 minutes)
 
 ---
 
 ### 📈 Rolling Volatility (Standard Deviation)
 
-Volatility measures the amount of variation or dispersion of a set of price values.
+Volatility measures the variation of prices over time.
 
-**Formula:**
-
-\[
-\sigma_t = \sqrt{ \frac{1}{n} \sum_{i=0}^{n-1} (P_{t-i} - \mu)^2 }
-\]
-
-- \( \mu \): Mean price over the period
-- \( \sigma_t \): Rolling standard deviation at time \( t \)
-
-This helps us understand how "noisy" or stable the market is at a given time.
+**Formula:**  
+σ = sqrt( (Σ(P_i - μ)²) / n )  
+Where:  
+- μ: Mean of the prices  
+- σ: Standard deviation (volatility)
 
 ---
 
 ### 🚨 Z-Score Based Anomaly Detection
 
-Z-score tells us how far a price is from the mean in terms of standard deviations.
+Z-score indicates how many standard deviations a value is from the mean.
 
-**Formula:**
-
-\[
-z_t = \frac{P_t - \mu}{\sigma}
-\]
-
-- If \( |z| > 2.5 \), the price is considered an **anomaly**.
-
-In our dashboard, anomalies are visualized as red "X" markers on the price chart.
+**Formula:**  
+z = (P_t - μ) / σ  
+If |z| > 2.5 → the price is considered an anomaly.
 
 ---
 
 ### 📉 SMA Crossover Trading Strategy
 
-A basic buy/sell logic using price and moving average:
+Basic logic used:
 
-- If \( P_t < SMA_t \): **BUY signal**
-- If \( P_t > SMA_t \): **SELL signal**
+- If Price < SMA → **BUY signal**  
+- If Price > SMA → **SELL signal**
 
-This is a simple but effective strategy to follow momentum reversals.
 
----
+
 
 
