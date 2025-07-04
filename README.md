@@ -128,24 +128,24 @@ To build a complete data science pipeline that:
 ```bash
 git clone https://github.com/berkaykorcum/algorithmic-trade-insights.git
 cd algorithmic-trade-insights
-
+```
 
 2. Install the dependencies:
 ```bash
 pip install -r requirements.txt
-
+```
 
 3. Fetch fresh BTC price data:
-
+```bash
 python main.py
 
-
+```
 
 4. Launch the dashboard in your browser:
-
+```bash
 streamlit run dashboard/app.py
 
-
+```
 
 ## 📐 Technical & Statistical Concepts
 
